@@ -39,45 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('EcoTrack')),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(color: Color(0xFFCBD3AD)),
-              child: Text('EcoTrack Menu', style: TextStyle(fontSize: 20)),
-            ),
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () => Navigator.pop(context),
-            ),
-            ListTile(
-              leading: const Icon(Icons.info_outline),
-              title: const Text('About EcoTrack'),
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (_) => AlertDialog(
-                    title: const Text('About EcoTrack'),
-                    content: const Text(
-                        'EcoTrack v1.0\nBuilt by Nouran 🌱\n\n'
-                            'EcoTrack helps you log daily choices in transport, food, and energy, '
-                            'and gives you a carbon score to raise awareness about your footprint.'
-                    ),
-                    actions: [
-                      TextButton(
-                        onPressed: () => Navigator.pop(context),
-                        child: const Text('Close'),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
