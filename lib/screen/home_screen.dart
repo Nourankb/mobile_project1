@@ -44,9 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // 👋 Personalized greeting
+            
             Text(
-              "Hello Nouran 👋, ready to track today?",
+              "Hello 👋, ready to track today?",
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 20),
